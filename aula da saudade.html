@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ensino médio do 3ºA — Google Fotos</title>
+  <meta name="description" content="Página com carrossel animado e responsiva, nas cores da nova paleta." />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Meta tags Open Graph / Twitter -->
+  <meta property="og:title" content="Ensino médio do 3ºA — Google Fotos" />
+  <meta property="og:description" content="Confira meus álbuns favoritos — Viagens, Família, Projetos e Eventos." />
+  <meta property="og:image" content="https://meusite.com/imagens/capa.jpg" />
+  <meta property="og:url" content="https://meusite.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+
+  <style>
+    :root{
+      --preto:#000000;
+      --cinza:#1A1A1A;
+      --branco:#FFFFFF;
+      --corar:#E54F6D;
+      --mostarda:#F8D440;
+      --muted:#AAAAAA;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      min-height:100%;
+      background:var(--preto);
+      color:var(--branco);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px 20px;
+      box-sizing:border-box;
+    }
+
+    .container{
+      width:100%;
+      max-width:920px;
+      background:var(--cinza);
+      border-radius:14px;
+      padding:24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+      background:var(--mostarda);
+      color:var(--preto);font-weight:700;font-size:20px;
+      flex:0 0 56px;
+    }
+
+    h1{font-size:20px;margin:0;color:var(--branco)}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    .grid{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(1,1fr);
+    }
+    @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+      min-height:200px;
+      background:var(--cinza);
+      display:flex;flex-direction:column;justify-content:flex-end;
+      text-decoration:none;color:inherit;
+      transform-origin:center center;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .carousel{
+      position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;border-radius:12px;z-index:0;
+    }
+    .carousel img{
+      width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 1s ease-in-out;
+    }
+    .carousel img.active{opacity:1;}
+
+    .overlay{
+      position:relative;z-index:1;background:linear-gradient(to top,rgba(0,0,0,0.7),rgba(0,0,0,0));padding-top:80px;color:#fff;
+    }
+
+    .card .title{font-size:16px;margin:0 0 6px 0;font-weight:600}
+    .card .subtitle{font-size:13px;color:#ccc;margin:0}
+
+    .badge{
+      position:absolute;top:12px;right:12px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600;background:rgba(0,0,0,0.6);color:#fff;backdrop-filter:blur(6px);z-index:2;
+    }
+
+    .actions{display:flex;gap:10px;margin-top:12px}
+    .btn{
+      padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);font-weight:600;font-size:13px;text-decoration:none;color:#fff
+    }
+
+    footer{margin-top:14px;font-size:12px;color:var(--muted);text-align:center}
+
+    a.card:focus{outline:3px solid var(--corar);outline-offset:4px}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">3ºA</div>
+      <div>
+        <h1>Ensino médio do 3ºA — Google Fotos</h1>
+        <p class="lead">Site com links para álbuns contendo registros do nosso ensino médio.<br> Obs.: no álbum tem mais fotos.</p>
+      </div>
+    </header>
+
+    <section class="grid">
+      <a class="card" href="https://photos.app.goo.gl/PmL9xNVZrry6uK548" target="_blank">
+        <div class="carousel">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczN5Rr_mXUoV22aczQfKRTMj37O43jBVlk-PjIuh4Y815jpHcQnh4wI1v26D7uhhigpTPTA0IEc5jDvMkcg0sxSew0hPy4zcsTPeUMNRQm73DmJCxprY5eHBgmtoe5V4Dlqinb_s7LujeV7eqL700Xja=w1199-h853-s-no-gm?authuser=0" class="active">
+          <img src="jogos_antonio.jpg">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczMOcSgQ6S-VjzjE_tSpkrILTIgD36xvktAWqkBFzqhVMwIW4jG6yxnt1Pcq-cNmVwWT-cZNa8nz34nD4Iix5dRBn5lf7B_wyFKpVjfyAhpFR2POu5SaLoa7a-O-4ykB0vUM-o1qCHn7_VmpWPg-38Yo=w1216-h913-s-no-gm?authuser=0">
+          <img src="china.jpg">
+        </div>
+        <div class="badge">Álbum 1</div>
+        <div class="overlay">
+          <h3 class="title">1º ano A-DS</h3>
+          <p class="subtitle"> Nossos primeiros momentos de ensino médio.</p>
+          <div class="actions"><span class="btn">Abrir álbum</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="https://photos.app.goo.gl/XDpFGpS4mH2CkzD17" target="_blank">
+        <div class="carousel">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczNnhms5jTgDW5JGtElAyTX0lHGpMwj-vy9sNeqsOVpfukJ92dqyaXfMaP5pmGv2uHcmH4HT8O4Wq0zTG5NX0OrhaDde1NXgjmy_cFfnK7v0Br_kIfIThfiZf1MOKtwTghje4fpvsv4KoU_I-bACsZrR=w685-h913-s-no-gm?authuser=0" class="active">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczPnb8Ep7_VO8MvALteKuADvmCIcK_7U3fp7HEc6C6X8jrdTW-588gW6QA5uQ5dSirSElpFmlnDnbYI2fm3BqOVrm7uQbdT58MwWtOzwTWNtdPnmoyL3MmJptmqADHpVv0o6qbnYVf1pEJ6FuSjoVlsm=w1600-h900-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczPvOxV3LiG-axFgqDxH2_fkmjxCdNELzQ5kBw5VCWjUetHWEc1egAHT9Kp09x4x_ikbkpUiAmH52CPKUVCE8SwtqjgpU1ugaIGIpY1yC7z33BEnhLu7ljD_JuHp4tuXrPJcO8ImvpOO-SxkbS7Y2EM0=w1216-h913-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczOXcYlX8-AlQVDfQKnYtqKAhruBS52M5f1M2JIGFLi9WqE7KueXOlS9mGwGlyuXqJkew6Fe95UsTzxwRUmNFzZ3Wuk5Qs-oebY45SITxqW3rZGNee4hKGbzmjJh6FWRZM_0Qp1wghWS9xMnGMQ7H0Kx=w590-h449-s-no-gm?authuser=0">
+        </div>
+        <div class="badge">Álbum 2</div>
+        <div class="overlay">
+          <h3 class="title">2º ano A-DS</h3>
+          <p class="subtitle">Momentos do nosso 2º ano de ensino médio.</p>
+          <div class="actions"><span class="btn">Abrir álbum</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="https://photos.app.goo.gl/wwxJQprG9X2vp7M38" target="_blank">
+        <div class="carousel">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczMe6ntKpuSCHoAfDtI7lwjB6Y0uytsSOvhMx7Lc5JdyMEq4O0hHqfMBSNjwY4mJOCVlC9x_TPPGPnA5SvhqKc7nZWL4qLi5Ts4SCCs2y0QoXDqt-34-rLEaRHObCI6nFC9e1xdjjTutmlM2fIpJVkeh=w640-h640-s-no-gm?authuser=0" class="active">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczN_SKlSnW6O7FI-u67CyXXT7-XSXJkd9yHjBnuGeNWYthJ8y68RJWlRc0DPjwKUiXFsEJeecgm-dXKZKlJDxrhz28GtcOocB2owup_AbkUxW_yP30CUsnbzZ3xbibet1mkaS15qh_Woz2vvdJuyf1QL=w685-h913-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczMJyOc7WPo4bge3GAnnQCjWCNowwekXvvTdvpkKIF7eJFtvE9pwxJ5e-bJZFTd69RlOjOgY2OpkKWNoQgxOtmaG_8qxTblzPU7N5bec6-hVF30JSLu_6HqTcZ1YXP6-XyTvgHaSceO7Co9-uWDgdUgw=w1216-h913-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczPUSKGvjJEzKKyMRfpKpVTxs98YVtBzDjK2-dKTStLchZa1TKe4YwnOLQv8YvNGjqmbvpGBKi1kZbzWYn5erClq-vpN3GRbz6AgfT5-mhNIhzY9JxzFT0RPu_HIiHobYqZmw83no3MfZ39oqsEzSr0s=w1216-h913-s-no-gm?authuser=0">
+        </div>
+        <div class="badge">Álbum 3</div>
+        <div class="overlay">
+          <h3 class="title">3º ano A-DS</h3>
+          <p class="subtitle">Nossos últimos momentos no ensino médio e na escola.</p>
+          <div class="actions"><span class="btn">Abrir álbum</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="https://photos.app.goo.gl/KaHb51FaXdL7Km8t9" target="_blank">
+        <div class="carousel">
+          <img src="hadassa_sara.jpg" class="active">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczMIgy1agvmUqm_Ue-dOHmTfcApdyF5wkfn1sDM34QJjqrDw14YQFFU7o8i4A2FidBExkTwdNRI4ieD6ZZCA7Vx1t2HJ4Vkzw67ADqclzb6wIrPwWFFDjDrPWAfqEmeucBLaKAREkfGnoMv-8vMH8M6E=w1600-h900-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczOglxO3FSbA1X-Amz7qb_7iroQwfvsJDZOQrZijAAtrISH5_uruBNoge-R13VvsdhCc5FNZDEdO9GT4NEyhRxriBeIWBNMg0Xr15F3L8wECWOT2GQHOLukaiBHs-sP6ts_2GaJOs7SfEfeQUVmhRezH=w1216-h913-s-no-gm?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/AP1GczNZl8dCCI4J8Wo7glElPxhT8FXMa8T_unilFFUt1oGuDAIQpw8uOTaPbnsPugyXHk63XMJ-jG-kMaI3XxLeTA5njCgcG9Ja8obOa9Sv22TecLhjkHIexno_s5gfJRGNtTHLPCwH0US5wt4lkn8zvwBc=w1216-h913-s-no-gm?authuser=0">
+
+        </div>
+        <div class="badge">Álbum 4</div>
+        <div class="overlay">
+          <h3 class="title">Todo o ensino médio - 2023 a 2025</h3>
+          <p class="subtitle">Todos os nossos momentos no ensino médio.</p>
+          <div class="actions"><span class="btn">Abrir álbum</span></div>
+        </div>
+      </a>
+    </section>
+
+    <footer>Feito com anime.js • Produção por Alana</footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const cards = document.querySelectorAll('.card');
+      anime.timeline({easing:'easeOutQuart',duration:700})
+      .add({targets: cards, translateY:[24,0], opacity:[0,1], delay:anime.stagger(150)});
+
+      document.querySelectorAll('.carousel').forEach(carousel => {
+        const imgs = carousel.querySelectorAll('img');
+        let i = 0;
+        setInterval(()=>{
+          imgs[i].classList.remove('active');
+          i = (i+1) % imgs.length;
+          imgs[i].classList.add('active');
+        }, 3000);
+      });
+
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', ()=> anime({targets: card, scale:1.02, duration:220, easing:'easeOutSine'}));
+        card.addEventListener('mouseleave', ()=> anime({targets: card, scale:1, duration:300, easing:'easeOutElastic', elasticity:400}));
+      });
+    });
+  </script>
+</body>
+</html>
